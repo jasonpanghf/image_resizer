@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batch Image Resizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Assistance panel -->
+        <aside class="left-panel">
+            <h2>Image Resizing Assistance</h2>
+            <p>Use this tool to efficiently resize multiple images at once. It operates locally in your browser, so your files never leave your device.</p>
+            <ol>
+                <li>First, choose your desired output size, format and other options in the control panel.</li>
+                <li>Then drag and drop your images into the drop area or click to select them. I’ll resize them based on your instructions.</li>
+                <li>Once processed, your resized images will appear below with download links.</li>
+            </ol>
+        </aside>
+        <!-- Control panel -->
+        <main class="right-panel">
+            <h2>Control Panel</h2>
+            <div class="fields">
+                <div class="field-group">
+                    <label for="width">Target Width</label>
+                    <input type="number" id="width" min="1" value="1200">
+                    <span class="unit">px</span>
+                </div>
+                <div class="field-group">
+                    <label for="height">Target Height</label>
+                    <input type="number" id="height" min="1" value="1200">
+                    <span class="unit">px</span>
+                </div>
+                <div class="field-group">
+                    <label for="format">Format</label>
+                    <select id="format">
+                        <option value="png">PNG</option>
+                        <option value="jpeg">JPEG</option>
+                        <option value="webp">WEBP</option>
+                    </select>
+                </div>
+                <div class="field-group checkbox-group">
+                    <input type="checkbox" id="lock-aspect" checked>
+                    <label for="lock-aspect">Lock Aspect Ratio</label>
+                </div>
+                <div class="field-group checkbox-group">
+                    <input type="checkbox" id="auto-rename" checked>
+                    <label for="auto-rename">AI Auto Rename</label>
+                </div>
+            </div>
+
+            <!-- Hidden file input -->
+            <input type="file" id="file-input" multiple accept="image/*" style="display: none;">
+
+            <!-- Drop area -->
+            <div id="drop-area" class="drop-area">
+                <p>Drop files here to resize or click to select</p>
+            </div>
+
+            <!-- Output list -->
+            <ul id="output-list" class="output-list"></ul>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

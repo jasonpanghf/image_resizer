@@ -1,0 +1,141 @@
+/* Basic styling for the Batch Image Resizer */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #f5f7fa;
+    color: #222;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.left-panel {
+    flex: 0 0 35%;
+    background: linear-gradient(135deg, #222b45, #2e3a5c);
+    color: #fff;
+    padding: 2rem 1.5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.left-panel h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.left-panel p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.left-panel ol {
+    padding-left: 1.25rem;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.right-panel {
+    flex: 1;
+    background-color: #fff;
+    padding: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-panel h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.field-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1 1 45%;
+    min-width: 140px;
+}
+
+.field-group label {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.field-group input[type="number"],
+.field-group select {
+    padding: 0.4rem 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1;
+}
+
+.field-group .unit {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.checkbox-group {
+    flex: 1 1 100%;
+    justify-content: flex-start;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 0.5rem;
+    transform: scale(1.1);
+}
+
+.drop-area {
+    border: 2px dashed #999;
+    border-radius: 6px;
+    padding: 2rem;
+    text-align: center;
+    color: #666;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.drop-area.highlight {
+    background-color: #f0f8ff;
+    border-color: #3a80ba;
+    color: #3a80ba;
+}
+
+.output-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0;
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+.output-list li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.output-list a {
+    color: #007bff;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.output-list a:hover {
+    text-decoration: underline;
+}
